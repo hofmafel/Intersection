@@ -13,6 +13,7 @@ public:
 	bool contains(const std::string& element) const;
 	uint64_t intersection(const StringSet& set2) const;
 	uint64_t intersection(const StringSet& set2, const StringSet& set3) const;
+	uint64_t uniqueElements(const StringSet& set2, const StringSet& set3) const;
 	int removeAll(const std::string part);
 	void add(const std::string element);
 	size_t size() const;

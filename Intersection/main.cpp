@@ -19,6 +19,10 @@ int main(int argc, char* argv[])
 			std::cout << "Intersection:" << set1->label() << " : " << set3->label() << " -> " << set1->intersection(*set3) << std::endl;
 			std::cout << "Intersection:" << set1->label() << " : " << set2->label() << " : " << set3->label() << " -> " << set1->intersection(*set2, *set3) << std::endl;
 			std::cout << "Intersection:" << set2->label() << " : " << set3->label() << " -> " << set2->intersection(*set3) << std::endl;
+	
+			std::cout << "Unique Elements of:" << set1->label() << " : " << set1->uniqueElements(*set2, *set3) << std::endl;
+			std::cout << "Unique Elements of:" << set2->label() << " : " << set2->uniqueElements(*set1, *set3) << std::endl;
+			std::cout << "Unique Elements of:" << set3->label() << " : " << set3->uniqueElements(*set1, *set2) << std::endl;
 	}
 	catch (...)
 	{

@@ -32,6 +32,15 @@ uint64_t StringSet::intersection(const StringSet& set2, const StringSet& set3) c
     return count;
 }
 
+uint64_t StringSet::uniqueElements(const StringSet& set2, const StringSet& set3) const
+{
+    uint64_t count = 0;
+    for (auto const& record : this->set)
+        if ((set2.contains(record) == false) && (set3.contains(record) == false))
+            count++;
+    return count;
+}
+
 
 int StringSet::removeAll(const std::string part)
 {
